@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Student Payment Summary</h2>
+{% if request.user.is_superuser %}
+    <a href="/students/export/">Download Excel</a>
+{% endif %}
+
+<table border="1" cellpadding="10">
+<tr>
+    <th>Student</th>
+    <th>Course</th>
+    <th>Total Fee</th>
+    <th>Paid</th>
+    <th>Pending</th>
+</tr>
+
+{% for d in data %}
+<tr>
+    <td>{{ d.student }}</td>
+    <td>{{ d.course }}</td>
+    <td>{{ d.total_fee }}</td>
+    <td>{{ d.paid }}</td>
+    <td>{{ d.pending }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

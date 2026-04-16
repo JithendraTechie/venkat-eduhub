@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Venkat Eduhub</title>
+</head>
+
+<body>
+
+    <!-- SIMPLE NAVBAR -->
+    <div style="background:#333; color:white; padding:10px;">
+        <a href="/" style="color:white; margin-right:15px;">Dashboard</a>
+        <a href="/students/" style="color:white; margin-right:15px;">Students</a>
+        <a href="/logout/" style="color:white;">Logout</a>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div style="padding:20px;">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
